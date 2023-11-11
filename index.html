@@ -368,15 +368,15 @@
             var totalScore = totalEscore + totalFscore + totalPscore;
 
 			if (totalnumberofquestions >= 25){
-				document.getElementById("p_result").innerHTML = "非常感謝您完成了這份調查中所有的問題<br><br>請勿關閉此頁面，並將以下資料展示給物理治療師。<br><br> P: " + Math.round(totalPscore) + "/28";
+				document.getElementById("p_result").innerHTML = "非常感謝您完成了這份調查中所有的問題<br><br>請勿關閉此頁面，並將你的分數寫在卡上，然後交給物理治療師。<br><br> 你第一部分(P)的分數是: " + Math.round(totalPscore) + "/28";
 
-				document.getElementById("E_result").innerHTML = "F: " + Math.round(totalFscore) + "/32";
+				document.getElementById("F_result").innerHTML = "你第二部分(F)的分數是: " + Math.round(totalFscore) + "/32";
 			
-				document.getElementById("F_result").innerHTML = "E: " + Math.round(totalEscore) + "/40 <br> Total: " + totalScore + "/100";
+				document.getElementById("E_result").innerHTML = "你第三部分(E)的分數是: " + Math.round(totalEscore) + "/40 <br> Total: " + totalScore + "/100";
 
-				var popup = showPopup("非常感謝您完成了這份調查中所有的問題<br><br>請勿關閉此頁面，並將以下資料展示給物理治療師。<br><br> P: " + Math.round(totalPscore) + "/28 <br>"
-				+ "F: " + Math.round(totalFscore) + "/32<br>"
-				+ "E: " + Math.round(totalEscore) + "/40 <br> Total: " + totalScore + "/100"
+				var popup = showPopup("非常感謝您完成了這份調查中所有的問題<br><br>請勿關閉此頁面，並將你的分數寫在卡上，然後交給物理治療師。<br><br> 你第一部分(P)的分數是: " + Math.round(totalPscore) + "/28 <br>"
+				+ "你第二部分(F)的分數是: " + Math.round(totalFscore) + "/32<br>"
+				+ "你第三部分(E)的分數是: " + Math.round(totalEscore) + "/40 <br> Total: " + totalScore + "/100"
 				);
 			} else {
 				var failpopupcontent = "";
@@ -587,8 +587,8 @@
 			
         <br><br>
 		<div id="p_result"></div>
-		<div id="E_result"></div>
 		<div id="F_result"></div>
+		<div id="E_result"></div>
 		<br>
 		<div class="button-container">
 			<input type="reset" value="重設" onclick="resetContent()"> 
